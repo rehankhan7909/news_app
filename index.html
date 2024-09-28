@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Inform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <nav>
+    <div class="main-nav container flex">
+    <a href="#"  onclick="reload()">
+    <img src=".\assets\newslogo-removebg-preview.png" alt="" id="news-img" class="logo">
+    </a>
+    <!-- hamburger-menu -->
+    <div class="hamburger-menu" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+       <div class="nav-links" id="nav-links">
+        <ul class="flex">
+        <li class="hover" id="ipl" onclick="onNaveitemclick('ipl')">IPL</li>
+        <li class="hover" id="finance" onclick="onNaveitemclick('finance')">Finance</li>
+        <li class="hover" id="politics" onclick="onNaveitemclick('politics')">Politics</li>
+        </ul>
+       </div>
+       <div class="searchbar flex">
+        <input type="text" class="news-inpute" placeholder="eg.Finance"  id="searchbar">
+        <button class="btn" id="Searchbutton">Search</button>
+       </div>
+    </div>
+    
+</nav>
+
+<!-- image section -->
+<main>
+    <div class="cards-container container flex " id="cards-container" >
+        
+          <div class="card">
+            <div class="card-header">
+              <img src="" class="rehan" alt="">
+           </div>
+           <div class="card-contant">
+               <h2 id="newheading">This is The ittle</h2>
+               <h6 id="news-source" class="news-source">End gadets</h6>
+               <p class="news-desk" id="news-desk">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ratione quidem amet rerum adipisci tenetur autem nemo magnam voluptatem recusandae temporibus, in dolorum perspiciatis minus? Dolore ullam temporibus eaque rem!</p>
+           </div>
+        </div>
+
+    </div>
+</main>
+  
+<template id="new-card-template">
+    <div class="card" >
+        <div class="card-header">
+          <img src="" class="rehan" alt=" " id="rehan">
+       </div>
+       <div class="card-contant">
+           <h2 id="newheading">This is The ittle</h2>
+           <h6 id="news-source" class="news-source">End gadets</h6>
+           <p class="news-desk" id="news-desk">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ratione quidem amet rerum adipisci tenetur autem nemo magnam voluptatem recusandae temporibus, in dolorum perspiciatis minus? Dolore ullam temporibus eaque rem!</p>
+       </div>
+    </div>
+</template>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

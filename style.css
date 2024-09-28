@@ -1,0 +1,296 @@
+*{
+    margin: 0%;
+    padding: 0%;
+   box-sizing: border-box;
+}
+:root{
+    --primary-text-color:#183b56;
+    --secondry-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+}
+body{
+   color: var(--primary-text-color); 
+   
+}
+
+p{
+  color: var(--secondry-text-color);
+  line-height: 1.4rem;  
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+nav{
+ background-color: #f3faff;  
+ box-shadow: 0 0 5px #bbd0e2; 
+ position: fixed;
+ top: 0;
+ z-index: 99;
+ left: 0;
+ right: 0;
+}
+ul li {
+    list-style: none;
+    font-size: larger;
+    font-weight: bolder;
+    /* transition: all 0.3 ease; */
+}
+.nav-links ul li:hover {
+    border-bottom: 1px solid var(--primary-text-color);
+    align-items: start;
+    transform: translateY(-2px); 
+ } 
+ 
+
+.main-nav{
+    justify-content: space-between;
+   padding-block:8px ;
+}
+.logo{
+  width: 120px;  
+}
+.logo {
+    width: 150px;
+    transition: transform 0.5s ease;
+}
+
+/* Zoom effect on hover */
+.logo:hover {
+    transform: scale(1.2); /* Zoom effect */
+}
+
+/* Zoom animation when the page loads */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8); /* Start smaller */
+    }
+    100% {
+        transform: scale(1); /* End at original size */
+    }
+}
+
+/* Apply zoomIn animation to the logo on load */
+.logo {
+    animation: zoomIn 1s ease-out;
+}
+.nav-links ul{
+    gap: 20px;
+}
+.hover{
+    cursor: pointer;
+}
+.hover:hover{
+    color: var(--secondry-text-color);
+}
+.hover:active{
+color: red;
+}
+.searchbar{
+    height: 32px;
+    gap: 8px;
+    
+}
+.news-inpute{
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 1px solid var(--accent-color);
+}
+.btn{
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: var(--accent-color-dark);
+}
+main{
+    padding-block: 20px;
+    margin-top: 100px;
+}
+.cards-container {
+    justify-content: space-between;
+   flex-wrap: wrap;
+   row-gap: 20px;
+  align-items: start;
+}
+.card{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px  #d4ecff;
+   border-radius: 6px;
+   cursor: pointer;
+   background-color: #fff;
+   overflow: hidden;
+   transition:all 0.3s ease ;
+}
+.card:hover{
+    box-shadow: 1px 1px 8px #dfecff;
+    background-color: #f9fdff;
+    transform: translateY(-4px);
+
+}
+.rehan {
+    width: 360px;
+    height: 200px;
+}
+.card-header img{
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+.newheading{
+    font-weight: bolder;
+}
+.card-contant{
+    padding-top: 12px;
+}
+.news-source {
+    margin-block: 12px;
+}
+
+
+/* chat */
+
+
+
+
+/* Default styles for desktop */
+body {
+    background-color: white;
+    font-size: 18px;
+  }
+
+  /* Default Styles (for larger screens) */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+  }
+  
+  .logo{
+    width: 150px; /* Logo size */
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .hamburger-menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent-color);
+    display: block;
+    margin: 5px 0;
+  }
+ 
+  /* Media query for tablets and mobile screens */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: -30px;
+      background-color:transparent;
+      flex-direction: column;
+      width: 200px;
+      /* padding: 10px; */
+      text-align: right;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .hamburger-menu {
+      display: block;
+    }
+  
+    .logo img {
+      width: 120px; /* Adjusted logo size for smaller screens */
+    }
+  }
+  
+  /* Media query for mobile phones */
+  @media (max-width: 480px) {
+    .main-nav{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .logo {
+      width: 100px; /* Smaller logo on mobile */
+    }
+  
+    .nav-links {
+      width: 100%;
+      text-align: left;
+      padding-left: 0;
+    }
+  }
+  .nav-links.active {
+  display: flex;
+}
+
+  
+  /* Media query for tablets (width 768px and below) */
+  @media only screen and (max-width: 768px) {
+    body {
+      background-color: lightgray;
+      font-size: 16px;
+    }
+  }
+ 
+  
+  /* Media query for mobile phones (width 480px and below) */
+  @media only screen and (max-width: 480px) {
+    body {
+      background-color: white;
+      font-size: 14px;
+    }
+  }
+
+  /* For mobile devices */
+@media only screen and (max-width: 600px) {
+  .card{
+    width: 100%;   /* Make the image take full width of the screen */
+    height: auto;  /* Maintain the aspect ratio of the image */
+    object-fit: contain;  /* Ensures the image is fully visible and not cut */
+  }
+}
+
+  
